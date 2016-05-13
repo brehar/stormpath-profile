@@ -1,0 +1,15 @@
+<h3>Your Profile</h3>
+
+<div class="well">
+    {{ user.customData.profile }}
+</div>
+
+<button ng-hide="editing" type="button" class="btn btn-lg btn-default" ng-click="edit()">Edit Profile</button>
+
+<form ng-show="editing" ng-submit="saveEdit()">
+    <div class="form-group">
+        <textarea class="form-control" ng-model="editUser.customData.profile"></textarea>
+    </div>
+    <button type="button" class="btn btn-warning" ng-click="cancelEdit()">Discard Changes</button>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+</form>

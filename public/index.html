@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stormpath Profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="/js/stormpath-sdk-angularjs.min.js"></script>
+    <script src="/js/stormpath-sdk-angularjs.tpls.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/js/module.js"></script>
+</head>
+<body ng-app="spApp">
+    <div class="container text-center">
+        <div class="row">
+            <button class="btn btn-info" ui-sref="home">Home</button>
+            <button if-not-user class="btn btn-success" ui-sref="login">Login</button>
+            <button if-not-user class="btn btn-primary" ui-sref="register">Register</button>
+            <button if-user class="btn btn-primary" ui-sref="profile">Profile</button>
+            <button if-user class="btn btn-warning" ui-sref="home" sp-logout>Logout</button>
+        </div>
+        <div class="row">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</body>
+</html>

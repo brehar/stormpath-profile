@@ -1,0 +1,17 @@
+{
+  "name": "stormpath-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brett Hartman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-stormpath": "^3.1.2",
+    "morgan": "^1.7.0"
+  }
+}
